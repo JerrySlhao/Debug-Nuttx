@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Nuttx",
+            "name": "Debug LM3S",
             "type": "cppdbg",
             "request": "launch",
             "program": "nuttx/nuttx",
@@ -18,6 +18,36 @@
             "customLaunchSetupCommands": [],
             "launchCompleteCommand": "exec-run",
             "preLaunchTask": "qemu debug",
+            "osx": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "arm-none-eabi-gdb"
+            },
+            "linux": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "gdb-multiarch"
+            },
+            "windows": {
+                "MIMode": "gdb",
+                "miDebuggerPath": "arm-none-eabi-gdb.exe"
+            }
+        },
+        {
+            "name": "Debug ARMV7A",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "nuttx/nuttx",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "miDebuggerServerAddress": "localhost:1234",
+            "serverLaunchTimeout": 2000,
+            "targetArchitecture": "ARM",
+            "setupCommands": [],
+            "customLaunchSetupCommands": [],
+            "launchCompleteCommand": "exec-run",
+            "preLaunchTask": "qemu debug armv7a",
             "osx": {
                 "MIMode": "gdb",
                 "miDebuggerPath": "arm-none-eabi-gdb"
