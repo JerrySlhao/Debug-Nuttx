@@ -9,8 +9,16 @@
     "forward_list": "c",
     "list": "c",
     "fstream": "c",
-    "dm.h": "c"
-  },
+    "dm.h": "c",
+    "export": "c",
+    "ioctl.h": "c",
+    "types.h": "c",
+    "*.tcc": "cpp",
+    "string": "cpp",
+    "string_view": "cpp",
+    "array": "c",
+    "streambuf": "c"
+},
   "C_Cpp_Runner.cCompilerPath": "gcc",
   "C_Cpp_Runner.cppCompilerPath": "g++",
   "C_Cpp_Runner.debuggerPath": "gdb",
