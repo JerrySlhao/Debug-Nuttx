@@ -60,6 +60,24 @@
                 "MIMode": "gdb",
                 "miDebuggerPath": "arm-none-eabi-gdb.exe"
             }
+        },
+        {
+            "name": "Debug Physical",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/nuttx/build/nuttx", 
+            "stopAtEntry": true,
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "interface": "swd",
+            "device": "STM32G474RE",
+
+            "svdFile":"${workspaceRoot}/.vscode/STM32G474xx.svd",
+            "svdUpdateRate": 500,
+            "configFiles": [
+                "${workspaceRoot}/.vscode/openocd.cfg",
+                "${workspaceRoot}/.vscode/stm32g4x.cfg"
+            ]
         }
     ]
 }

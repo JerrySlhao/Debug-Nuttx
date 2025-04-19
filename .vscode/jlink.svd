@@ -1,0 +1,9 @@
+source [find jlink.cfg]
+source [find stm32g4x.cfg]
+adapter_khz 4000
+
+#make the initial connection and halt the board
+
+inti
+targets
+reset halt
